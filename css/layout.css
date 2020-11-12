@@ -139,7 +139,7 @@ html{
 }
 
 .mainfooter ul{
-    border: blue solid 1px;
+    /* border: blue solid 1px; */
     display: flex;
     justify-content: center;
 }
