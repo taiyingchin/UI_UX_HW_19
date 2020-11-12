@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway&display=swap');
+
+*{ /* reset for elements */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{ /* body styling */
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul{ /* getting rid of bullets */
+    list-style-type: none;
+}
+
+a{ /* no underline + color change */
+    text-decoration: none;
+    color: #333;
+}
+
+h1, h2, h3, h4{ /* default for h1 - h4 */
+    line-height: 1.2;
+    margin: 10px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation Bar */
+.navbar{
+    /* border: 1px solid red; */
+    height: 70px;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a{
+    padding: 20px;
+    margin: 0 5px;
+}
+
+.navbar img{
+    width: 69px;
+    height: 86px;
+    margin-top: 1%;
+}
+
+.navbar h1{
+    font-size: 25px;
+    position: relative;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Hero Section */
+.herosection{
+    /* border: 1px solid red; */
+    height: 650px;
+}
+
+.welcomequote h1{
+    font-family: "Raleway", sans-serif;
+    font-size: 70px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.welcomequote h2{
+    font-family: "Raleway", sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.welcomequote b{
+    font-family: "Raleway:ital,wght@1,900", sans-serif;
+}
+
+/* Project Showcase */
+.showcase{
+    /* border: 1px solid red; */
+    height: 700px;
+    /* display: grid; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* max-width: 90%; */
+    /* margin: 0 5%; */
+}
+
+/* .showcase .grid{
+    border: green solid 1px;
+} */
+
+.project{
+    /* border: 1px solid #000; */
+    height: 500px;
+    width: 250px;
+    text-align: center;
+}
+
+.project .show-text{
+    padding-top: 200px;
+    font-size: 20px;
+}
+
+.project .show-num{
+    padding-top: 25px;
+    font-size: 20px;
+}
+
+/* .project1:hover{
+    color: white;
+    background-image: url(/images/Ontario.jpeg);
+    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.3);
+} */
+
+/* Footer */
+.mainfooter{
+    height: 70px;
+    background-color: #353B44;
+    color: white;
+}
+
+.mainfooter p{
+    /* border: blue solid 1px; */
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainfooter ul{
+    border: blue solid 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.mainfooter a{
+    padding: 10px;
+    margin: 0 10px;
+    color: white;
+}
+
+.mainfooter .grid{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Media Queries */
+/* Pop Up Animation >= 1024px */
+@media(min-width: 1024px){
+    .showcase .card:hover{
+        transform: translateY(-20px);
+    }
+}
+
+/* Between 768 to 1500 */
+@media(min-width: 768px) and (max-width: 1500px){
+    .grid,
+    .showcase .grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .showcase{
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project{
+        height: 300px;
+        width: 400px;
+    }
+
+    .project .show-text{
+        font-size: 20px;
+        padding-top: 100px;
+    }
+
+
+}
+
+/* between 500 to 768 */
+@media(min-width: 500px) and (max-width: 768px){
+    .grid,
+    .showcase .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .showcase .grid{
+        gap: 0%;
+    }
+
+    .showcase{
+        height: 900px;
+        display: flex;
+    }
+
+    .project{
+        height: 200px;
+        width: 350px;
+    }
+
+    .project .show-text{
+        font-size: 20px;
+        padding-top: 50px;
+    }
+}
+
+/* between 500 and under */
+@media(max-width: 500px){
+    .navbar{
+        height: 150px;
+    }
+
+    .navbar .flex{
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        padding: 10px;
+    }
+}
