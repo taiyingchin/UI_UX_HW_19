@@ -28,6 +28,10 @@ h1, h2, h3, h4{ /* default for h1 - h4 */
     font-family: 'Montserrat', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Navigation Bar */
 .navbar{
     /* border: 1px solid red; */
